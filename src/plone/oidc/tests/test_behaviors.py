@@ -34,7 +34,7 @@ class TestBehaviors(unittest.TestCase):
         """ """
         # Context mock
         with api.env.adopt_roles('Manager'):
-            id_ = self.portal.invokeFactory('OidcTestUser', 'test_oidc_user')
+            id_ = self.portal.invokeFactory('OidcTestUser', 'test_oidc_user')  # noqa: P001
             user_context = self.portal[id_]
 
         # Test: OidcTestUser has expected behaviors
@@ -44,7 +44,7 @@ class TestBehaviors(unittest.TestCase):
     def test_enumerate(self):
         """ """
         with api.env.adopt_roles('Manager'):
-            id_ = self.portal.invokeFactory('OidcTestUser', 'test_oidc_user2')
+            id_ = self.portal.invokeFactory('OidcTestUser', 'test_oidc_user2')  # noqa: P001
             user_context = self.portal[id_]
 
         oid_connection_claims = queryUtility(IBehavior, name=IOidConnectClaims.__identifier__)

@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 from plone import api
-from plone.behavior.interfaces import IBehavior
-from plone.dexterity.behavior import DexterityBehaviorAssignable
-from plone.oidc.membrane.behaviors import IOidConnectClaims
 from plone.oidc.testing import PLONE_OIDC_INTEGRATION_TESTING
-from zope.component import queryUtility
 
 import unittest
 
