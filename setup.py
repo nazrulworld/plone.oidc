@@ -63,7 +63,7 @@ setup(
     keywords='Python Plone OpenID oAuth2',
     author='Md Nazrul Islam',
     author_email='email2nazrul@gmail.com',
-    url='https://pypi.python.org/pypi/plone.oidc',
+    url='https://pypi.org/project/plone.oidc',
     license='GPL version 2',
     packages=find_packages('src', exclude=['ez_setup']),
     namespace_packages=['plone'],

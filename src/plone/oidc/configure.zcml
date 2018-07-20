@@ -31,6 +31,13 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.uninstall"
       />
+  <genericsetup:registerProfile
+        name="testing"
+        title="plone.oidc (testing)"
+        directory="profiles/testing"
+        description="Testing the plone.oidc add-on."
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
 
   <utility
       factory=".setuphandlers.HiddenProfiles"

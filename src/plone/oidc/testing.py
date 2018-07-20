@@ -35,6 +35,7 @@ class PloneOidcLayer(PloneSandboxLayer):
         applyProfile(portal, 'dexterity.membrane:default')
         applyProfile(portal, 'plone.restapi:default')
         applyProfile(portal, 'plone.oidc:default')
+        applyProfile(portal, 'plone.oidc:testing')
 
 
 PLONE_OIDC_FIXTURE = PloneOidcLayer()
