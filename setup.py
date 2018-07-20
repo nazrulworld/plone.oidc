@@ -41,7 +41,7 @@ test_requires = [
 
 setup(
     name='plone.oidc',
-    version='1.0.0a2',
+    version='1.0.0a3.dev0',
     description="OpenID Connect implementation in Plone",
     long_description=long_description,
     # Get more from https://pypi.org/pypi?%3Aaction=list_classifiers
