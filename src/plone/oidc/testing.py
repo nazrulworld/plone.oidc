@@ -18,9 +18,23 @@ class PloneOidcLayer(PloneSandboxLayer):
         # Load any other ZCML that is required for your tests.
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
+        z2.installProduct(app, 'Products.membrane')
+
+        import plone.restapi
+        self.loadZCML(package=plone.restapi)
+
+        import Products.membrane
+        self.loadZCML(package=Products.membrane)
+
+        import dexterity.membrane
+        self.loadZCML(package=dexterity.membrane)
+
         self.loadZCML(package=plone.oidc)
 
     def setUpPloneSite(self, portal):
+        applyProfile(portal, 'Products.membrane:default')
+        applyProfile(portal, 'dexterity.membrane:default')
+        applyProfile(portal, 'plone.restapi:default')
         applyProfile(portal, 'plone.oidc:default')
 
 
