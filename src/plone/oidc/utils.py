@@ -8,7 +8,9 @@ from plone.api.validation import required_parameters
 
 import six
 
+
 __author__ = 'Md Nazrul Islam (email2nazrul@gmail.com)'
+
 
 @required_parameters('value')
 def force_unicode(value, allow_non_str=True):

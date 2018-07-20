@@ -7,8 +7,6 @@ from plone.app.testing import IntegrationTesting
 from plone.app.testing import PloneSandboxLayer
 from plone.testing import z2
 
-import plone.oidc
-
 
 class PloneOidcLayer(PloneSandboxLayer):
 
@@ -29,6 +27,7 @@ class PloneOidcLayer(PloneSandboxLayer):
         import dexterity.membrane
         self.loadZCML(package=dexterity.membrane)
 
+        import plone.oidc
         self.loadZCML(package=plone.oidc)
 
     def setUpPloneSite(self, portal):

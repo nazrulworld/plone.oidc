@@ -11,11 +11,11 @@ from plone.namedfile.field import NamedBlobImage
 from plone.oidc import _
 from plone.oidc.utils import force_unicode
 from plone.supermodel import model
+from Products.membrane.interfaces import IMembraneUserObject
 from zope.component import adapter
 from zope.interface import implementer
-from zope.interface import provider
 from zope.interface import Interface
-from Products.membrane.interfaces import IMembraneUserObject
+from zope.interface import provider
 
 
 __author__ = 'Md Nazrul Islam (email2nazrul@gmail.com)'
@@ -167,8 +167,8 @@ class IProvideOidConnectClaims(model.Schema):
         title=_('Language'),
         description=_(
             str('End-User\'s locale, represented as a BCP47 [RFC5646] language tag. '
-            'This is typically an ISO 639-1 Alpha-2 [ISO639‑1] language code in '
-            'lowercase and an ISO 3166-1 Alpha-2 [ISO3166‑1] country code in uppercase, ').decode('utf-8') +
+                'This is typically an ISO 639-1 Alpha-2 [ISO639‑1] language code in '
+                'lowercase and an ISO 3166-1 Alpha-2 [ISO3166‑1] country code in uppercase, ').decode('utf-8') +
             'separated by a dash. For example, en-US or fr-CA. As a compatibility note, '
             'some implementations have used an underscore as the separator rather than a dash, '
             'for example, en_US; Relying Parties MAY choose to accept this locale syntax as well.'
@@ -230,7 +230,7 @@ class IOidConnectClaims(IProvideOidConnectClaims):
     # Putting this in a separate fieldset for the moment:
     model.fieldset(
         'claims',
-        label=_(u"OpenID Connect Claims"),
+        label=_(u'OpenID Connect Claims'),
         fields=['phone_number', 'address']
     )
 
