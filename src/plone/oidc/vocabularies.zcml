@@ -1,0 +1,9 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:vdex="http://namespaces.zope.org/vdex"
+  i18n_domain="plone.oidc">
+
+  <include package="collective.vdexvocabulary" file="meta.zcml" />
+  <vdex:vocabulary directory="vocabularies" />
+
+</configure>

@@ -25,7 +25,7 @@ class TestBehaviors(unittest.TestCase):
 
             >>> from plone.oidc.membrane.behaviors import IOidConnectClaims
             >>> print IOidConnectClaims.__identifier__
-            fhir.heart.behavior.user.IOidConnectClaims
+            plone.oidc.membrane.behaviors.IOidConnectClaims
         """
         oid_connection_claims = queryUtility(IBehavior, name='plone.oidc.membrane.behaviors.IOidConnectClaims')
         self.assertIsNotNone(oid_connection_claims)

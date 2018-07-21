@@ -16,6 +16,7 @@ install_requires = [
         'plone.schema>=1.2.0',
         'plone.api>=1.8.4',
         'Products.GenericSetup>=1.8.2',
+        'collective.vdexvocabulary',
         'oic',
         'pysaml2',
         'certifi',
