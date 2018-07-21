@@ -26,14 +26,6 @@
         </caption>
     </term>
     <term>
-        <termIdentifier>A128CBC-HS256</termIdentifier>
-        <caption>
-            <langstring language="en">A128CBC-HS256</langstring>
-            <langstring language="da">A128CBC-HS256</langstring>
-            <langstring language="bn">A128CBC-HS256</langstring>
-        </caption>
-    </term>
-    <term>
         <termIdentifier>A192CBC-HS384</termIdentifier>
         <caption>
             <langstring language="en">A192CBC-HS384</langstring>

@@ -7,7 +7,7 @@
   <!-- Basic properties -->
   <property
       i18n:translate=""
-      name="title">OAuth2Client</property>
+      name="title">OAuth2.0 Client</property>
   <property
       i18n:translate=""
       name="description">HEART's complainant OAuth 2.0 client</property>
@@ -32,7 +32,6 @@
 
   <!-- Enabled behaviors -->
   <property name="behaviors" purge="false">
-    <element value="plone.app.dexterity.behaviors.metadata.IBasic"/>
   </property>
 
   <!-- View information -->

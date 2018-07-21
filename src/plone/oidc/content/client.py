@@ -10,6 +10,8 @@ from plone.oidc import _
 from plone.supermodel import model
 from zope.interface import implementer
 
+import six
+
 
 __author__ = 'Md Nazrul Islam (email2nazrul@gmail.com)'
 
@@ -111,7 +113,7 @@ class IOAuth2Client(model.Schema):
             'the End-User in a followable fashion. If desired, representation of this '
             'Claim in different languages and scripts is represented as described in Section 2.1.'
         ),
-        requiredl=False
+        required=False
     )
 
     policy_uri = ps.URI(
@@ -270,7 +272,7 @@ class IOAuth2Client(model.Schema):
             'it is passed by reference (using the request_uri parameter). '
             'Servers SHOULD support RS256. The value none MAY be used. The default, if omitted, '
             'is that any algorithm supported by the OP and the RP MAY be used.'),
-        vocabulary='oauth2_app_jwt_algs_options',
+        vocabulary='oauth2_client_jwt_algs_options',
         required=False
     )
 
@@ -299,7 +301,7 @@ class IOAuth2Client(model.Schema):
             'the default for this value is A128CBC-HS256. When request_object_encryption_enc '
             'is included, request_object_encryption_alg MUST also be provided.'
         ),
-        vocabulary='oauth2_app_jwt_enc_options',
+        vocabulary='oauth2_client_jwt_enc_options',
         required=False
     )
 
@@ -490,3 +492,15 @@ class IOAuth2Client(model.Schema):
 @implementer(IOAuth2Client)
 class OAuth2Client(Container):
     """HEART's complainant OAuth 2.0 client"""
+
+    def Title(self):
+        # this is a CMF accessor, so should return utf8-encoded
+        if getattr(self, 'title', None):
+            if isinstance(self.title, six.text_type):
+                return self.title.encode('utf-8')
+            return self.title
+
+        if isinstance(self.client_name, six.text_type):
+            return self.client_name.encode('utf-8')
+
+        return self.client_name or ''
