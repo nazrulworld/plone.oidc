@@ -1,11 +1,11 @@
 .. contents::
 
 
-==========
-plone.oidc
-==========
+============
+Introduction
+============
 
-Pure `OpenID Connect`_ implementation for Plone framework which is 100% comply with `OpenID Connect Core 1.0`_ specifications. More over this product is `Health Relationship Trust Profile for OAuth 2.0`_ complience with, so can be easily adaptable with `HEART`_ ecosystem.
+ `plone.oidc <https://pypi.org/project/plone.oidc/>`_ is the pure `OpenID Connect`_ implementation for Plone framework which is 100% comply with `OpenID Connect Core 1.0`_ specifications. More over this product is `Health Relationship Trust Profile for OAuth 2.0`_ complience with, so can be easily adaptable with `HEART`_ ecosystem.
 
 
 Features
