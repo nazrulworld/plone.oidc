@@ -52,6 +52,10 @@ PLONE_OIDC_FUNCTIONAL_TESTING = FunctionalTesting(
     name='PloneOidcLayer:FunctionalTesting',
 )
 
+PLONE_OIDC_REST_FUNCTIONAL_TESTING = FunctionalTesting(
+    bases=(PLONE_OIDC_FIXTURE, z2.ZSERVER_FIXTURE),
+    name='PloneOidcLayer:RESTFunctionalTesting',
+)
 
 PLONE_OIDC_ACCEPTANCE_TESTING = FunctionalTesting(
     bases=(

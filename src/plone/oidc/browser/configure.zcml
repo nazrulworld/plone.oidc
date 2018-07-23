@@ -17,5 +17,13 @@
       type="plone"
       directory="static"
       />
+  <!-- Public Views -->
+  <browser:page
+    for="Products.CMFCore.interfaces.ISiteRoot"
+    name=".well-known"
+    permission="zope2.Public"
+    class=".webfinger.WebFingerView"
+    layer="plone.oidc.interfaces.IPloneOidcLayer"
+  />
 
 </configure>
